@@ -66,7 +66,7 @@ def user_input()->list:
 
     return jobs, partition
 
-def First_In_First_Out(jobs: list, partition: list)->None:
+def First_In_First_Out(jobs: list, partition: list)->list:
     fragmentation: list = []
     waiting: list = []
     fifo_list = []
@@ -95,7 +95,7 @@ def First_In_First_Out(jobs: list, partition: list)->None:
 
     return fifo_list, fragmentation, waiting
 
-def Best_Fit(jobs: list, partition: list)->None:
+def Best_Fit(jobs: list, partition: list)->list:
     fragmentation: list = []
     waiting: list = []
     fifo_list = []
@@ -122,7 +122,7 @@ def Best_Fit(jobs: list, partition: list)->None:
 
     return fifo_list, fragmentation, waiting
 
-def Next_Fit(jobs: list, partition: list)->None:
+def Next_Fit(jobs: list, partition: list)->list:
     fragmentation: list = []
     waiting: list = []
     fifo_list = []
@@ -153,7 +153,7 @@ def Next_Fit(jobs: list, partition: list)->None:
 
     return fifo_list, fragmentation, waiting
 
-def Worst_Fit(jobs: list, partition: list)->None:
+def Worst_Fit(jobs: list, partition: list)->list:
     fragmentation: list = []
     waiting: list = []
     fifo_list = []

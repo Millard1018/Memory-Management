@@ -119,6 +119,7 @@ def Next_Fit(jobs: list, partition: list)->list:
     waiting: list = [] # list of jobs that is in waiting 
     nextFit: list = [] # list containing the values that will be display
     allocated_partitions = [] # list of allocated partition that will be used to check to identify partition that was not used
+    allocated_index = 0
     for i, job in enumerate(jobs):
         allocated = False
         for j in range (allocated_index, len(partition)):
@@ -188,7 +189,7 @@ def display(scheme: list, fragmentation: list, waiting:list, memory_utilization:
             print(f"J{wait}", end = " ")
 
     if fragmentation: #If there is fragmentation
-        print(f"Average Internal Fragmentation: {sum(fragmentation)/len(fragmentation):.2f}")
+        print(f"\nAverage Internal Fragmentation: {sum(fragmentation)/len(fragmentation):.2f}")
     
     if memory_utilization: # If memory has been utilized
         print(f"Average Memory Utilization: {sum(memory_utilization)/len(partition):.2f}%")
